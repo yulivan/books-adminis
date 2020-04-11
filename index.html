@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>libros</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- FONTAWESOME-ICONS -->
+    
+<script src="https://kit.fontawesome.com/746cd4296d.js" crossorigin="anonymous"></script>
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="public/style-menu.css">
+    <link rel="stylesheet" type="text/css" href="public/style.css">
+  </head>
+  <body>
+     
+    <div class="site-wrap">
+
+      <a href="#" class="offcanvas-toggle js-offcanvas-toggle">Menu</a>
+        
+      <div class="offcanvas_menu" id="offcanvas_menu">
+        <div class="overlay">
+          <ul>
+            <li class="logo"><i class="fa fa-book-open"></i></li>
+            <li><a href="#">Inicio</a></li>
+            <li class="active"><a href="#">Libros</a></li>
+            <li><a href="#">Listado</a></li>
+          </ul>
+        </div>
+      </div>  
+  
+  <main>
+        <!-- INPUT BUSCAR -->
+        <div class="buscar">
+          <input type="search" name="buscar" placeholder="Buscar">
+        </div>
+        <!--x UNPUT BUSCAR x-->
+        <div class="titulo">
+          <i class="fa fa-book-open"></i>
+          <h1>Libros</h1>
+        </div>
+        <!-- -------- FORMULARIO - VISTA PREVIA IMAGEN ------ -->
+        <form id="insertar-libro" enctype="multipart/form-data">
+        
+        <div class="contenido-book">
+          <!-- COL 1 formulario entrada -->
+          <div class="col">
+            <div class="form-book">
+              <!-- ID oculto -->
+                <input type="hidden" name="id" id="idlibro">
+ 
+                <input type="text" name="nombreLibro" id="nombreLibro" placeholder="Titulo">
+                <input type="text" name="nombreAutor" id="nombreAutor" placeholder="Autor/es">
+                
+                <input type="number" name="fechaLibro" placeholder="Año">
+                
+                <select name="categoria" id="categoria" required class="">
+                  <option value="" selected>Categoria</option>
+                  <option value="1">Infantil</option>
+                  <option value="2">Amor</option>
+                  <option value="3">Fantasia</option>
+                  <option value="4">Educativo</option>
+                </select>
+                
+                <input type="text" name="nombreEditorial" id="nombreEditorial" placeholder="Editorial">
+                <textarea name="descripcion" id="descripcion" placeholder="Descripcion"></textarea>
+
+                <div class="form-btn">
+                    <input type="submit" id="botonform" value="Guardar" class="btn-rose">
+                    <button class="btn-rose">Cancelar</button>
+               </div>
+
+            </div>
+          </div>
+          <!-- COL 2 vista previa input-file-img- -->
+          <div class="col">
+            <div class="form-book-imagen">
+              
+                <div class="item img-preve">
+                    <img src="public/images/img-preve.jpg" id="imgpreve">
+                </div>
+                <div class="item inputModificado">
+                  <input class="inputImagen" id="archivo1"/>
+                  <div class="botonInputFileModificado">
+                      <input type="file" class="inputImagenOculto" id="archivo_oculto1" name="archivo_oculto1"/>
+                      <div class="boton">examinar</div>
+                  </div>        
+                </div>  
+            	
+            </div>
+          </div>
+
+      </div> <!-- contenido book -->
+    	</form>
+      <!-- ---X----- FORMULARIO - VISTA PREVIA IMAGEN ---X--- -->
+       
+
+      <!-- ----------------- LISTA LIBROS TABLE ------------------------ -->
+      <section class="listalibro">
+        <div class="cabecera">
+          <div class="col-lis"><span>Libro</span></div>
+          <div class="col-lis"><span>Descripcion</span></div>
+          <div class="col-lis"><span>Categoria</span></div>
+          <div class="col-lis"><span>Acciones</span></div>
+        </div>
+
+        <div class="contenido">
+        <!------------LISTA---FILA-----codificar------->
+        <div class="contenedor">
+          <div class="fila">
+            <div class="subfila">
+              <div class="fila1">
+                <img src="public/images/brilla-todo.jpg" alt="milibro">
+              </div>
+              <div class="fila1">
+                <h2>Brilla todo lo que puedas</h2>
+                <address>Sara Rattaro</address>
+                <span>2017 - Duomo Nefelibata</span>
+              </div>
+            </div>
+          </div>
+          <div class="fila">
+            <p class="descrip">Una historia inspiradora donde del dolor nace la esperanza</p>
+          </div>
+          <div class="fila">
+            <p>Novela</p>
+          </div>
+          <div class="fila">
+            <div class="acciones-btn">    
+              <button class="btn-accion">
+                <div class="relieve">
+                   <i class="fa fa-feather-alt" aria-hidden="true"></i>  
+                </div>
+                  <span>Editar</span>
+              </button>
+              <button class="btn-accion">
+                <div class="relieve">
+                    <i class="fa fa-trash-alt" aria-hidden="true"></i>  
+                </div>
+                <span>Borrar</span>
+              </button>
+            </div>       
+          </div>
+        </div> <!-- contenedor -->
+        <!-----X-------LISTA---FILA-----codificar---X---->
+
+        <div class="contenedor">
+          <div class="fila">
+            <div class="subfila">
+              <div class="fila1">
+                  <img src="public/images/lachica-del-tren.jpg" alt="milibro">
+              </div>
+              <div class="fila1">
+                <h2>La chica del tren</h2>
+                <address>Paula Hawkins</address>
+                <span>2018 - Planeta</span>
+              </div>
+            </div>
+          </div>
+          <div class="fila fila-descrip">
+            <p class="descrip">Lorem ipsum dolor sit amet, consectetur</p>
+          </div>
+          <div class="fila">
+            <p>categoria</p>
+          </div>
+          <div class="fila">
+            <div class="acciones-btn">    
+              <button class="btn-accion">
+                <div class="relieve">
+                   <i class="fa fa-feather-alt" aria-hidden="true"></i>  
+                </div>
+                  <span>Editar</span>
+              </button>
+              <button class="btn-accion">
+                <div class="relieve">
+                    <i class="fa fa-trash-alt" aria-hidden="true"></i>  
+                </div>
+                <span>Borrar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="contenedor">
+          <div class="fila">
+            <div class="subfila">
+              <div class="fila1">
+                <img src="public/images/ysite-vuelvo.jpg" alt="milibro">
+              </div>
+              <div class="fila1">
+                <h2>¿Y si te vuelvo a Encontrar?</h2>
+                <address>Carol B. A.</address>
+                <span>2016 - Zafiro</span>
+              </div>
+            </div>
+          </div>
+          <div class="fila fila-descrip">
+            <p class="descrip">Lorem ipsum dolor sit amet,
+             sed do eiusmod tempor incididunt ut labore et dolore ma
+            gna aliqua. Ut enim ad minim veniam, quis nostrud exerci
+            tation ullamco laboris nisi ut aliquip ex ea commodo con
+            sequat. Duis aute irure dolor in reprehenderit in volupt
+            ate velit essecillum dolore eu fugiat nulla pariatur.</p>
+          </div>
+          <div class="fila">
+            <p>categoria</p>
+          </div>
+          <div class="fila">
+            <div class="acciones-btn">    
+              <button class="btn-accion">
+                <div class="relieve">
+                   <i class="fa fa-feather-alt" aria-hidden="true"></i>  
+                </div>
+                  <span>Editar</span>
+              </button>
+              <button class="btn-accion">
+                <div class="relieve">
+                    <i class="fa fa-trash-alt" aria-hidden="true"></i>  
+                </div>
+                <span>Borrar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+      </div> <!-- contenido -->
+
+      </section>
+      <!-- --------x--------- LISTA LIBROS TABLE ---------x----------- -->
+
+      <!---------------- PAGINACION ---------------------->
+ 	    <div class="block-27">
+        <ul class="pagination" id="paginador">
+          <!------------- CODIFICAR -------------->
+        	
+          <!-- boton previo-atras -->
+        	<li><a href="#" class="prev_link">
+        		<span aria-hidden="true">
+                  <span class="fa fa-chevron-left"></span>
+            </span>
+        	</a></li>
+          <!-- lista de paginas -->
+        	<li class="active"><a href="#" class="page_link"><span>1</span></a></li>
+        	<li><a href="#" class="page_link"><span>2</span></a></li>
+        	<li><a href="#" class="page_link"><span>3</span></a></li>
+        	<!-- boton siguiente -->
+        	<li><a href="#" class="next_link">
+        		<span aria-hidden="true">
+   	           <span class="fa fa-chevron-right"></span>
+           	</span>
+        	</a></li>
+        	<!-- ------X----- CODIFICAR -------x------- -->
+
+        </ul>
+      </div>
+
+      <!-------X--------- PAGINACION ----------X------------>
+
+        <footer> 
+          <span>&copy; 2020 - IngSoftware</span>
+            <a href="https://paypal.me/ingandreina" class="btn-donar" target="_blank">
+           Donar
+                <i class="fas fa-heart"></i>
+            </a>    
+        </footer>
+    
+    </main>
+  </div>  <!--  site-wrap -->
+
+<!-- ------------------------------------FIN----------------------------------- -->
+    
+    <!-- FONTAWESOME-ICONS-JS  -->
+    
+    <!-- MY JAVASCRIPT -->
+    <script src="public/jquery-3.2.1.min.js"></script>
+    <script src="public/main.js"></script>
+
+  </body>
+</html>
